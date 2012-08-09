@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.js">
+        </script>
+        <script src="my.js">
+        </script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            <div data-theme="b" data-role="header">
+                <h3>
+                    Test 1
+                </h3>
+                <a data-role="button" data-transition="fade" href="test1.html" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                    Back
+                </a>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>
+                            How did this person do?
+                        </legend>
+                        <input name="radiobuttons1" id="radio1" value="radio1" type="radio" />
+                        <label for="radio1">
+                            Pass
+                        </label>
+                        <input name="radiobuttons1" id="radio2" value="radio2" type="radio" />
+                        <label for="radio2">
+                            Fail
+                        </label>
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <label for="textarea6">
+                            Comments:
+                        </label>
+                        <textarea name="" id="textarea6" placeholder="Enter Comments here...">
+                        </textarea>
+                    </fieldset>
+                </div>
+                <a data-role="button" data-transition="fade" data-theme="b" href="learner.html">
+                    Submit
+                </a>
+            </div>
+        </div>
+        <script>
+            //App custom javascript
+        </script>
+    </body>
+</html>
