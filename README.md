@@ -1,4 +1,0 @@
-mobile
-======
-
-mobile spam app
