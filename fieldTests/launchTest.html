@@ -19,7 +19,7 @@
 	<script type="text/javascript">
         var localStorageKey = "demoStorageKey";
 		var demoQuestion = "What is up with it vanilla face?"
-        $('#launch').live('pagecreate', function() {
+        $('#launch').live('pageinit', function() {
              localStorage.setItem(localStorageKey, demoQuestion);
              var item = localStorage.getItem(localStorageKey);
             $('.storeItem').text(item);
