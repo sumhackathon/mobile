@@ -19,41 +19,64 @@
     </head>
     <body>
         <!-- Home -->
-        <div data-role="page" id="page1">
-            <div data-theme="b" data-role="header">
+		
+        <div data-role="page" id="fieldtestshome">
+		<div data-theme="b" data-role="header" data-id="fieldtestsheader">
                 <h3>
                     Field Tests
                 </h3>
-                <a data-role="button" data-transition="fade" data-theme="b" href="#page1" data-icon="home" data-iconpos="left" class="ui-btn-left">
+                <a data-role="button" data-transition="fade" href="#fieldtestshome" data-icon="home" data-iconpos="left" class="ui-btn-left">
                 </a>
                 <div data-role="fieldcontain">
-                    <fieldset data-role="controlgroup" data-mini="true">
+                    <fieldset data-role="controlgroup">
                         <label for="searchinput1">
                         </label>
                         <input name="" id="searchinput1" placeholder="Search..." value="" type="search" />
                     </fieldset>
                 </div>
-                <div data-role="navbar" data-iconpos="top">
+                <div data-role="navbar" data-iconpos="left">
                     <ul>
                         <li>
-                            <a href="#page1" data-theme="" data-icon="" class="ui-btn-active ui-state-persist">
-                                Learner
+                            <a href="userlist.html" data-theme="b" data-icon="" class="ui-btn-active ui-state-persist">
+                                User
                             </a>
                         </li>
                         <li>
-                            <a href="#page1" data-theme="" data-icon="">
+                            <a href="courselist.html" data-theme="" data-icon="">
                                 Course
                             </a>
                         </li>
                         <li>
-                            <a href="#page1" data-theme="" data-icon="">
-                                Tests
+                            <a href="testlist.html" data-theme="" data-icon="">
+                                Test
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-theme="c">
+                        <a href="learner.html" data-transition="none">
+                            Bill Cosby
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="learner.html" data-transition="none">
+                            Thor
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="learner.html" data-transition="none">
+                            Zeus
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="learner.html" data-transition="none">
+                            Steve Perry
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
         <script>
