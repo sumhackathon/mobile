@@ -10,12 +10,9 @@
         <style>
             /* App custom styles */
         </style>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.js">
-        </script>
-        <script src="my.js">
-        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+        <script src="my.js"></script>
 		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
 		<script type="text/javascript" src="http://jquery-ui-map.googlecode.com/svn/trunk/ui/min/jquery.ui.map.full.min.js"></script>
     </head>
@@ -27,6 +24,7 @@
                     Spelunking
                 </h3>
             </div>
+			
             <div data-role="content" style="padding: 15px">
                 <div data-role="collapsible-set" data-theme="" data-content-theme="">
                     <div data-role="collapsible" data-collapsed="true">
@@ -59,20 +57,21 @@
                     </li>
                 </ul>
 				
-				<a href="#win2" data-role="button" id="btn" data-inline="true" data-icon="arrow-r">Display map</a>
+
+					<a href="#win2" data-role="button" id="btn" data-inline="true" data-icon="arrow-r">Display map</a>
+				</div>
 				
-				<div data-role="page" id="win2" data-add-back-btn="true">
+            </div>
+        </div>
+		<div data-role="page" id="win2" data-add-back-btn="true">
+				
 				<div data-role="header">
 					<h1>Location: </h1>
 				</div>
 				
 				<div data-role="content">
 				  <div id="#win2" style="width: 400px; height:400px;"></div>
-				</div>
-	</div>
-				
-            </div>
-        </div>
+				</div>			
         <script>
             //App custom javascript
 			
