@@ -19,7 +19,7 @@
     </head>
     <body>
         <!-- Home -->
-        <div data-role="page" id="page1" data-add-back-btn="true">
+        <div data-role="page" id="history" data-add-back-btn="true">
 			<div data-theme="b" data-role="header" data-id="learnerPage">
                 <h3>
                     Bill Cosby
@@ -39,55 +39,114 @@
                     </ul>
                 </div>
             </div>
-            <div data-role="content" style="padding: 15px">
-                <div data-role="collapsible-set" data-theme="" data-content-theme="b">
-                    <div data-role="collapsible" data-collapsed="true">
-                        <h3>
-                            Test 2
-                        </h3>
-                        <div data-role="fieldcontain">
-                            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-                                <legend>
-                                    Retake:
-                                </legend>
-                                <input name="radiobuttons1" id="radio1" value="radio1" type="radio" />
-                                <label for="radio1">
-                                    Yes
-                                </label>
-                                <input name="radiobuttons1" id="radio2" value="radio2" type="radio" />
-                                <label for="radio2">
-                                    No
-                                </label>
-                            </fieldset>
-                        </div>
-                    </div>
-                </div>
-                <div data-role="collapsible-set" data-theme="" data-content-theme="b">
-                    <div data-role="collapsible" data-collapsed="true">
-                        <h3>
-                            Test 3
-                        </h3>
-                        <div data-role="fieldcontain">
-                            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-                                <legend>
-                                    Retake:
-                                </legend>
-                                <input name="radiobuttons2" id="radio3" value="radio3" type="radio" />
-                                <label for="radio3">
-                                    Yes
-                                </label>
-                                <input name="radiobuttons2" id="radio4" value="radio4" type="radio" />
-                                <label for="radio4">
-                                    No
-                                </label>
-                            </fieldset>
-                        </div>
-                    </div>
-                </div>
-            </div>
+			<script>
+				var html = "";
+				if(localStorage.getItem("test1")!=null){
+					html += "<div data-role=\"content\" style=\"padding: 15px\">";
+					html += "<div data-role=\"collapsible-set\" data-theme=\"\" data-content-theme=\"b\">";
+					html += "<div data-role=\"collapsible\" data-collapsed=\"true\">";
+					html += "<h3>";
+					html += "Test 1";
+					html += "</h3>";
+					html += "<div data-role=\"fieldcontain\">";
+					html += "<fieldset data-role=\"controlgroup\" data-type=\"horizontal\" data-mini=\"true\">";
+					html += "<legend>";
+					html += "Retake:";
+					html += "</legend>";
+					html += "<input name=\"radiobuttons1\" id=\"radio1\" value=\"radio1\" type=\"radio\" />";
+					html += "<label for=\"radio1\">";
+					html += "Yes";
+					html += "</label>";
+					html += "<input name=\"radiobuttons1\" id=\"radio2\" value=\"radio2\" type=\"radio\" />";
+					html += "<label for=\"radio2\">";
+					html += "No";
+					html += "</label>";
+					html += "</fieldset>";
+					html += "</div>";
+					html += "</div>";
+					html += "</div>";
+					html += "</div>";
+				}
+				if(localStorage.getItem("test2")!=null){
+					html += "<div data-role=\"content\" style=\"padding: 15px\">";
+					html += "<div data-role=\"collapsible-set\" data-theme=\"\" data-content-theme=\"b\">";
+					html += "<div data-role=\"collapsible\" data-collapsed=\"true\">";
+					html += "<h3>";
+					html += "Test 1";
+					html += "</h3>";
+					html += "<div data-role=\"fieldcontain\">";
+					html += "<fieldset data-role=\"controlgroup\" data-type=\"horizontal\" data-mini=\"true\">";
+					html += "<legend>";
+					html += "Retake:";
+					html += "</legend>";
+					html += "<input name=\"radiobuttons1\" id=\"radio1\" value=\"radio1\" type=\"radio\" />";
+					html += "<label for=\"radio1\">";
+					html += "Yes";
+					html += "</label>";
+					html += "<input name=\"radiobuttons1\" id=\"radio2\" value=\"radio2\" type=\"radio\" />";
+					html += "<label for=\"radio2\">";
+					html += "No";
+					html += "</label>";
+					html += "</fieldset>";
+					html += "</div>";
+					html += "</div>";
+					html += "</div>";
+					html += "</div>";
+				}
+				if(localStorage.getItem("test3")!=null){
+					html += "<div data-role=\"content\" style=\"padding: 15px\">";
+					html += "<div data-role=\"collapsible-set\" data-theme=\"\" data-content-theme=\"b\">";
+					html += "<div data-role=\"collapsible\" data-collapsed=\"true\">";
+					html += "<h3>";
+					html += "Test 1";
+					html += "</h3>";
+					html += "<div data-role=\"fieldcontain\">";
+					html += "<fieldset data-role=\"controlgroup\" data-type=\"horizontal\" data-mini=\"true\">";
+					html += "<legend>";
+					html += "Retake:";
+					html += "</legend>";
+					html += "<input name=\"radiobuttons1\" id=\"radio1\" value=\"radio1\" type=\"radio\" />";
+					html += "<label for=\"radio1\">";
+					html += "Yes";
+					html += "</label>";
+					html += "<input name=\"radiobuttons1\" id=\"radio2\" value=\"radio2\" type=\"radio\" />";
+					html += "<label for=\"radio2\">";
+					html += "No";
+					html += "</label>";
+					html += "</fieldset>";
+					html += "</div>";
+					html += "</div>";
+					html += "</div>";
+					html += "</div>";
+				}
+				if(localStorage.getItem("test4")!=null){
+					html += "<div data-role=\"content\" style=\"padding: 15px\">";
+					html += "<div data-role=\"collapsible-set\" data-theme=\"\" data-content-theme=\"b\">";
+					html += "<div data-role=\"collapsible\" data-collapsed=\"true\">";
+					html += "<h3>";
+					html += "Test 1";
+					html += "</h3>";
+					html += "<div data-role=\"fieldcontain\">";
+					html += "<fieldset data-role=\"controlgroup\" data-type=\"horizontal\" data-mini=\"true\">";
+					html += "<legend>";
+					html += "Retake:";
+					html += "</legend>";
+					html += "<input name=\"radiobuttons1\" id=\"radio1\" value=\"radio1\" type=\"radio\" />";
+					html += "<label for=\"radio1\">";
+					html += "Yes";
+					html += "</label>";
+					html += "<input name=\"radiobuttons1\" id=\"radio2\" value=\"radio2\" type=\"radio\" />";
+					html += "<label for=\"radio2\">";
+					html += "No";
+					html += "</label>";
+					html += "</fieldset>";
+					html += "</div>";
+					html += "</div>";
+					html += "</div>";
+					html += "</div>";
+				}
+				$("#history").append (html);
+			</script>
         </div>
-        <script>
-            //App custom javascript
-        </script>
     </body>
 </html>
