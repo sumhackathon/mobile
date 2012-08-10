@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.js">
+        </script>
+        <script src="my.js">
+        </script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+		<script type="text/javascript" src="http://jquery-ui-map.googlecode.com/svn/trunk/ui/min/jquery.ui.map.full.min.js"></script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="page1" data-add-back-btn="true">
+            <div data-theme="b" data-role="header">
+                <h3>
+                    Spelunking
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <div data-role="collapsible-set" data-theme="" data-content-theme="">
+                    <div data-role="collapsible" data-collapsed="true">
+                        <h3>
+                            Details
+                        </h3>
+						<p>
+							This course tells you some stuff about cave diving.
+						</p>
+                    </div>
+                </div>
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Assigned Users
+                    </li>
+                    <li data-theme="c">
+                        <a href="test1.html" data-transition="slide">
+                            Batman
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="test1.html" data-transition="slide">
+                            Superman
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="test1.html" data-transition="slide">
+                            Robin
+                        </a>
+                    </li>
+                </ul>
+				
+				<a href="#win2" data-role="button" id="btn" data-inline="true" data-icon="arrow-r">Display map</a>
+				
+				<div data-role="page" id="win2" data-add-back-btn="true">
+				<div data-role="header">
+					<h1>Location: </h1>
+				</div>
+				
+				<div data-role="content">
+				  <div id="#win2" style="width: 400px; height:400px;"></div>
+				</div>
+	</div>
+				
+            </div>
+        </div>
+        <script>
+            //App custom javascript
+			
+			
+			
+			
+	navigator.geolocation.getCurrentPosition (function (pos)
+	{// this is used to generate geolocation positioning
+	  var lat = pos.coords.latitude;
+	  var lng = pos.coords.longitude;
+	  $("#lat").val (lat);
+	  $("#lng").val (lng);
+	});
+
+	$("#btn").bind ("click", function (event)
+	{
+	  //ar lat = $("#lat").val ();
+	  //var lng = $("#lng").val ();
+	  var latlng = new google.maps.LatLng (41.5930, -93.7650); //des moines office actual loc
+	  var options = { 
+		zoom : 15, 
+		center : latlng, 
+		mapTypeId : google.maps.MapTypeId.ROADMAP };
+	  
+	  map = new google.maps.Map (document.getElementById("#win2"), options)
+	
+	  $.mobile.changePage ($("#win2"));
+	  
+	  new google.maps.Marker ( 
+	  { 
+		map : map, 
+		animation : google.maps.Animation.DROP,
+		position : latlng
+	  });  
+	});
+        </script>
+    </body>
+</html>
