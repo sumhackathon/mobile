@@ -17,14 +17,11 @@
         <script src="my.js">
         </script>
 	<script type="text/javascript">
-        var localStorageKey = "demoStorageKey";
-		var demoQuestion = "What is up with it vanilla face?"
-        $('#launch').live('pageinit', function() {
-             localStorage.setItem(localStorageKey, demoQuestion);
-             var item = localStorage.getItem(localStorageKey);
-            $('.storeItem').text(item);
-        });
-    </script>
+	$(document).bind('pageinit', function(){
+			console.log('triggered pageinit');
+               $('#status').load('test.txt');
+           });
+	</script>
     </head>
     <body>
         <!-- Home -->
@@ -37,7 +34,17 @@
             <div data-role="content" style="padding: 15px">
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup" data-type="horizontal">
-                        <legend class="storeItem">  </legend>
+                        <legend class="storeItem">
+							<div id="question" name="question">
+								<script type="text/javascript">
+								$(document).live('pageinit', function(){
+									console.log('triggered question load');
+									$('#question').load('test1\\question.txt');
+								});
+								</script>
+								Question
+							</div>  
+						</legend>
                         <input name="radiobuttons1" id="radio1" value="radio1" type="radio" />
                         <label for="radio1">
                             Pass
@@ -51,7 +58,7 @@
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup">
                         <label for="textarea6">
-                            Comments:
+							Comments
                         </label>
                         <textarea name="" id="textarea6" placeholder="Enter Comments here...">
                         </textarea>
