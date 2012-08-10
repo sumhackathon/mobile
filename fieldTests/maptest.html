@@ -20,8 +20,7 @@
 	  </div>
 
 	  <div data-role="content">
-		<span> Latitude : </span> <input type="text" id="lat" />
-		<span> Longitude : </span> <input type="text" id="lng" />
+		
 		<a href="#win2" data-role="button" id="btn" data-inline="true" data-icon="arrow-r">Display map</a>
 	  </div>
 	</div>
@@ -32,17 +31,17 @@
 		</div>
 		
 		<div data-role="content">
-		  <div id="#win2" style="width:400px;height:700px;"></div>
+		  <div id="#win2" style="width: 400px; height:400px;"></div>
 		</div>
 	</div>
 
 </body>
 </html>
-
 <script type="text/javascript">
 
+
 	navigator.geolocation.getCurrentPosition (function (pos)
-	{
+	{// this is used to generate geolocation positioning
 	  var lat = pos.coords.latitude;
 	  var lng = pos.coords.longitude;
 	  $("#lat").val (lat);
@@ -51,23 +50,28 @@
 
 	$("#btn").bind ("click", function (event)
 	{
-	  var lat = $("#lat").val ();
-	  var lng = $("#lng").val ();
-	  var latlng = new google.maps.LatLng (lat, lng);
+	  //ar lat = $("#lat").val ();
+	  //var lng = $("#lng").val ();
+	  var latlng = new google.maps.LatLng (41.5898, -93.6184); //des moines office
 	  var options = { 
 		zoom : 15, 
 		center : latlng, 
 		mapTypeId : google.maps.MapTypeId.ROADMAP };
-	  var $content = $("#win2 div:jqmData(role=content)");
-	  $content.height (screen.height - 50);
-	  var map = new google.maps.Map ($content[0], options);
+	  //var $content = $("#win2 div:jqmData(role=content)");
+
+	  //$content.height (screen.height - 100);
+	  //document.write("Total Height: " + $content.height); // check to see what height $content has
+	  //var map = new google.maps.Map ($content[0], options);
+	  
+	  map = new google.maps.Map (document.getElementById("#win2"), options)
+	
 	  $.mobile.changePage ($("#win2"));
 	  
 	  new google.maps.Marker ( 
 	  { 
 		map : map, 
 		animation : google.maps.Animation.DROP,
-		position : latlng  
+		position : latlng
 	  });  
 	});
 
