@@ -41,8 +41,8 @@
             </div>
 			<script>
 				var html = "";
+				html += "<div data-role=\"content\" style=\"padding: 15px\">";
 				if(localStorage.getItem("test1")!=null){
-					html += "<div data-role=\"content\" style=\"padding: 15px\">";
 					html += "<div data-role=\"collapsible-set\" data-theme=\"\" data-content-theme=\"b\">";
 					html += "<div data-role=\"collapsible\" data-collapsed=\"true\">";
 					html += "<h3>";
@@ -62,7 +62,6 @@
 					html += "No";
 					html += "</label>";
 					html += "</fieldset>";
-					html += "</div>";
 					html += "</div>";
 					html += "</div>";
 					html += "</div>";
@@ -91,7 +90,6 @@
 					html += "</div>";
 					html += "</div>";
 					html += "</div>";
-					html += "</div>";
 				}
 				if(localStorage.getItem("test3")!=null){
 					html += "<div data-role=\"content\" style=\"padding: 15px\">";
@@ -114,7 +112,6 @@
 					html += "No";
 					html += "</label>";
 					html += "</fieldset>";
-					html += "</div>";
 					html += "</div>";
 					html += "</div>";
 					html += "</div>";
@@ -143,8 +140,8 @@
 					html += "</div>";
 					html += "</div>";
 					html += "</div>";
-					html += "</div>";
 				}
+				html += "</div>";
 				$("#history").append (html);
 			</script>
         </div>
